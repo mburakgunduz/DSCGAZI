@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mükemmel Sayı</title>
+</head>
+
+<body>
+	<h1>JavaScript ile Mükemmel Sayı Örneği</h1>
+	<form name="toplam">
+		<label>Sayı : </label>
+        <input type="text" id="deger"><br><br>
+        <input type="button" id="hesapla" value="HESAPLA"><br><br>
+        <label id="sonuc"></label>
+    </form>
+    <script>
+ 
+        var btn=document.getElementById("hesapla");
+        btn.onclick=function(){
+            var i,j;
+            var toplam=0;
+            var sayi=Number(document.getElementById("deger").value);
+            for(i=1;i<sayi;i++)
+             {
+                 if (sayi%i==0)
+                 {
+                    toplam=toplam+i;	
+                 }
+             }
+                 if (sayi==toplam)
+                 {
+                    
+                    document.getElementById("sonuc").innerHTML=sayi + " Sayısı Mükemmel Sayıdır";
+                    alert(sayi+" Sayısı Mükemmel Sayıdır.");	 
+                 }
+                 else
+                 {
+                    document.getElementById("sonuc").innerHTML=sayi + " Sayısı Mükemmel Sayı Değildir";
+                    alert(sayi+" Sayısı Mükemmel Sayı Değildir.");	 
+                 }
+             }
+    </script>
+</body>
+</html>
